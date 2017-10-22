@@ -8,6 +8,7 @@ public class RandomScript : MonoBehaviour {
 	void Start () 
 	{
 		print ("First Change"); 
+		print ("Second Change");
 		
 	}
 	
