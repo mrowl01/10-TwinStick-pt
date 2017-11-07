@@ -9,7 +9,7 @@ public class RandomScript : MonoBehaviour {
 	{
 		print ("First Change"); 
 		print ("Second Change");
-		print ("Third Change");
+		print ("Third Change"); 
 		
 	}
 	
