@@ -12,6 +12,11 @@ public class GameBoss : MonoBehaviour
 	void Start ()
 	{
 		replaySystem = GameObject.FindObjectOfType<ReplaySystem> (); 
+		PlayerPrefManager.UnlockLevel (1);
+		PlayerPrefManager.IsLevelUnlocked (1);
+		PlayerPrefManager.UnlockLevel (2);
+		PlayerPrefManager.IsLevelUnlocked (2); 
+		print ("PlayerPRefShouldhaveWorkedorloggedsomething");
 	}
 
 	void Update () 
@@ -26,4 +31,5 @@ public class GameBoss : MonoBehaviour
 			replaySystem.PlayBack (); 
 		}
 	}
+
 }

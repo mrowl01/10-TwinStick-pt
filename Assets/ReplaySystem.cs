@@ -30,7 +30,6 @@ public class ReplaySystem : MonoBehaviour
 		rigidBody.isKinematic = false; // Allows the object to be controlled by gravity
 		int frame = Time.frameCount % bufferFrames; // creates a loop between 0 and 100 to store the keyframes
 		float time = Time.time ; 
-		print ("Writing frame" + frame); 
 		keyFrames [frame] = new MyKeyFrame (time, transform.position, transform.rotation); // using the loop that repeats stores in the frame the constructor to play back to player (Time,pos and rot)
 		}
 	
@@ -40,7 +39,6 @@ public class ReplaySystem : MonoBehaviour
 
 			rigidBody.isKinematic = true; // lets us controll motion without interuppted by gravity
 			int frame = Time.frameCount % bufferFrames; 
-			print ("Playing back frames" + frame); 
 			transform.position = keyFrames [frame].position; 
 			transform.rotation = keyFrames [frame].rotation; 
 

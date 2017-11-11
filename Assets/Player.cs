@@ -23,7 +23,6 @@ public class Player : MonoBehaviour {
 	}
 
 	void OnCollisionEnter (Collision collision) {
-		print (collision.gameObject.tag);
 		if (tryingToGrab && collision.gameObject.tag == "Grabbable") {
 			isGrabbing = true;
 		}
